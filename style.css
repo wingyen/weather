@@ -1,0 +1,113 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	/* background: url("style/Up/Snapshots/Up.jpg"); */
+	text-align: justify;
+	margin: auto;
+	text-justify: distribute-all-lines;
+}
+  
+.content {
+	display: block;
+	position: relative;
+	font-family: 'Sunflower', sans-serif;
+	color:#fff;
+	width: 33% !important;
+	margin: 0 auto!important;
+	text-align: center;
+	
+}
+
+h1 {
+	font-weight: 900 !important;
+	line-height: 3 !important;
+	font-size: 3rem !important;
+}
+
+.searchbar,
+.button {
+	height: 45px;
+	margin: 1em 0 4em;
+	padding: 0;
+	font: 400 1rem;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+	color: white;
+	border: none;
+}
+.searchbar {
+	width: 380px;
+	border-bottom: 2px solid white !important;
+}
+
+
+.input-group {
+	margin-top: 50px;
+	width: 100% !important;
+	height: 100px !important;
+}
+
+.transparent {background: transparent !important;}
+
+.cityName::first-letter {
+	text-transform: capitalize;
+	
+}
+.cityName {
+	font-size: 2rem;
+}
+
+.cityName, .icon {
+	display: inline-block;
+}
+
+#greeting {
+	margin-bottom: 20px;
+}
+
+video#myVideo {
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	/* background:url("style/Up/Snapshots/Up.jpg") no-repeat;  */
+	background-size: cover;
+	overflow: hidden;
+	
+}
+
+.container {
+	text-align: left;
+	width: 100% !important;
+}
+
+.list-group {
+	text-align: justify;
+	text-justify: distribute-all-lines !important;
+}
+
+.list-group-item {
+	text-align: justify !important;
+	text-justify: distribute-all-lines !important;
+}
+
+span {
+	margin-right: 10px;
+}
+
+/* .secondary {opacity: 0.7;}
+.transparent {background: transparent;}
+.hot {background: #FF5722;}
+.warm {background: #FF6F00;}
+.cool {background: #2196F3;}
+.cold {background: #3F51B5;}
+.color404 {background: #161616;}
+.button-hot {background: #BF360C;}
+.button-warm {background: #B34E00;}
+.button-cool {background: #0D47A1;}
+.button-cold {background: #1A237E;}
+.button404 {background: black;}  */

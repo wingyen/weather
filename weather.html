@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <title>Weather</title>
+</head>
+
+<body>
+  <div>
+    <video autoplay muted loop id="myVideo">
+      <source id="bgVideo" src="style/Up.mp4" type="video/mp4">
+    </video>
+
+    <div class="content" id="weather">
+
+      <h1>UBIQUM Weather Pro</h1>
+
+      <div>
+        <h4 id="greeting">{{greeting}}</h4>
+      </div>
+
+      <div class="float-left">
+        <h2>{{date}}</h2>
+      </div>
+      <div class="float-right">
+        <h3 id="time"></h3>
+      </div>
+
+      <div class="input-group transparent">
+        <form>
+          <input v-model="city" class='searchbar transparent' id='search' type='text' placeholder='      enter city, country' style="text-align: center"/>
+
+          <input class='button transparent' id='button' @click="getData" type="button" value='GO' style="font-size: 1.5rem; font-weight: 800"
+          />
+
+        </form>
+      </div>
+
+
+      <div class="panel" style="width: 90%;">
+
+
+        <div class="panel-body" v-if="data">
+          <div class="cityName">{{city}}</div>
+          <div class="icon">
+            <img id="icon" src="" alt="icon">
+          </div>
+
+          <ul class="list-group ">
+            <li class="list-group-item transparent"><span>Weather:</span>{{data.weather[0].main}}</li>
+            <li class="list-group-item transparent"><span>Description:</span>{{data.weather[0].description}}</li>
+            <li class="list-group-item transparent"><span>Humidity:</span>{{data.main.humidity}}%</li>
+            <li class="list-group-item transparent"><span>Temperature:</span>{{temp}}</li>
+          </ul>
+        
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- vue -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="main.js"></script>
+
+  <!-- bootstrap -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
