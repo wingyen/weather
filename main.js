@@ -25,7 +25,7 @@ var app = new Vue({
     // },
 
     getData: function () {
-      fetch("http://api.openweathermap.org/data/2.5/weather?q=" + this.city + "&units=metric&lang=en&appid=a495404234abce9b5830b1e8d20e90a6")
+      fetch("https://api.openweathermap.org/data/2.5/weather?q=" + this.city + "&units=metric&lang=en&appid=a495404234abce9b5830b1e8d20e90a6")
         .then(response => response.json())
         .then(data => {
           this.data = data;
